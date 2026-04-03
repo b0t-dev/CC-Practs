@@ -1,0 +1,58 @@
+// pract 6
+
+SELECT *
+FROM csv.`/databricks-datasets/samples/population-vs-price/data_geo.csv`
+LIMIT 10;
+
+
+--Check the Average Price
+SELECT
+  State,
+  AVG(CAST(`2015 median sales price` AS DOUBLE)) AS Avg_Price
+FROM read_files(
+  '/databricks-datasets/samples/population-vs-price/data_geo.csv',
+  format => 'csv',
+  header => true,
+  inferSchema => true
+)
+GROUP BY State
+ORDER BY Avg_Price DESC;
+
+
+--Check the Population Estimate and Plot a Bar Chart
+SELECT
+  State,
+  SUM(CAST(`2014 population estimate` AS DOUBLE)) AS Total_Population_2014
+FROM read_files(
+  '/databricks-datasets/samples/population-vs-price/data_geo.csv',
+  format => 'csv',
+  header => true,
+  inferSchema => true
+)
+GROUP BY State
+ORDER BY Total_Population_2014 DESC;
+
+
+
+// Pract 7 -- SQL User Input
+SELECT 
+City, 
+State, 
+`2014 population estimate` AS Population_2014, 
+`2015 median sales price` AS Price_2015 
+FROM read_files( 
+'/databricks-datasets/samples/population-vs-price/data_geo.csv', 
+format => 'csv', 
+header => true, 
+inferSchema => true 
+) -- The colon (:) tells the Warehouse to create an input box automatically 
+WHERE State = :state_param 
+ORDER BY Population_2014 DESC;
+
+
+
+// Extraa datasets and link
+databricks_airline_performance_data.v01.flights  -- filight dataset
+Diamonds dataset -> CSV DELIMITED-> /databricks-datasets/Rdatasets/data-001/csv/ggplot2/diamonds.csv
+NYC TAXI TRIPS -> /databricks-datasets/samples/taxi_gl/
+IOT DEVICES -> /databricks-datasets/iot/iot_devices.json
