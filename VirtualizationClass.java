@@ -1,12 +1,19 @@
 // Pract 2 part 1
+// Pract 2 part 1
 public class VirtualizationClass {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
+
+        long maxMemory = Runtime.getRuntime().maxMemory();
+
         System.out.println("JVM Name: " + System.getProperty("java.vm.name"));
         System.out.println("OS Name: " + System.getProperty("os.name"));
+
+        // Conversions
+        System.out.println("Max JVM Memory in Bytes: " + maxMemory);
         System.out.println("Max JVM Memory in KB: " + (maxMemory / 1024));
         System.out.println("Max JVM Memory in MB: " + (maxMemory / (1024 * 1024)));
         System.out.println("Max JVM Memory in GB: " + (maxMemory / (1024 * 1024 * 1024)));
-        // System.out.println("Max JVM Memory: " + Runtime.getRuntime().maxMemory() / (1024 * 1024) + " MB");
+
         try {
             int[] arr = new int[500_0000];
             System.out.println("Memory allocated successfully!");
@@ -14,7 +21,6 @@ public class VirtualizationClass {
             System.out.println("OutOfMemoryError occurred!");
         }
     }
-
 }
 
 
