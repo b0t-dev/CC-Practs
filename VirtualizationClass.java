@@ -3,8 +3,10 @@ public class VirtualizationClass {
      public static void main(String[] args) {
         System.out.println("JVM Name: " + System.getProperty("java.vm.name"));
         System.out.println("OS Name: " + System.getProperty("os.name"));
-        System.out.println("Max JVM Memory: "
-                + Runtime.getRuntime().maxMemory() / (1024 * 1024) + " MB");
+        System.out.println("Max JVM Memory in KB: " + (maxMemory / 1024));
+        System.out.println("Max JVM Memory in MB: " + (maxMemory / (1024 * 1024)));
+        System.out.println("Max JVM Memory in GB: " + (maxMemory / (1024 * 1024 * 1024)));
+        // System.out.println("Max JVM Memory: " + Runtime.getRuntime().maxMemory() / (1024 * 1024) + " MB");
         try {
             int[] arr = new int[500_0000];
             System.out.println("Memory allocated successfully!");
