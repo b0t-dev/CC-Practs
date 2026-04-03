@@ -839,3 +839,223 @@ class CloudService(BaseHTTPRequestHandler):
 server = HTTPServer(("0.0.0.0", 8000), CloudService)
 print("Server running on port 8000...")
 server.serve_forever()
+
+
+# leap year 
+from http.server import HTTPServer, BaseHTTPRequestHandler
+from urllib.parse import urlparse, parse_qs
+
+class CloudService(BaseHTTPRequestHandler):
+
+    def do_GET(self):
+        parsed_url = urlparse(self.path)
+        params = parse_qs(parsed_url.query)
+
+        if parsed_url.path == "/":
+            self.show_form()
+
+        elif parsed_url.path == "/process":
+            self.process_request(params)
+
+    def show_form(self):
+        html = """
+        <html>
+        <body>
+            <h2>Leap Year Checker (Cloud Simulation)</h2>
+            <form action="/process" method="get">
+                Enter your name:
+                <input type="text" name="name"><br><br>
+
+                Enter a year:
+                <input type="number" name="year"><br><br>
+
+                <input type="submit" value="Check">
+            </form>
+        </body>
+        </html>
+        """
+        self.send_response(200)
+        self.send_header("Content-type", "text/html")
+        self.end_headers()
+        self.wfile.write(html.encode())
+
+    def process_request(self, params):
+        name = params.get("name", ["Guest"])[0]
+        year = int(params.get("year", [0])[0])
+
+        # Leap year logic
+        if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+            result_value = "It is a Leap Year "
+        else:
+            result_value = "It is NOT a Leap Year "
+
+        result = f"""
+        <html>
+        <body>
+            <h3>Hello {name}</h3>
+            <p>Entered Year: {year}</p>
+            <p>Result: <b>{result_value}</b></p>
+        </body>
+        </html>
+        """
+
+        self.send_response(200)
+        self.send_header("Content-type", "text/html")
+        self.end_headers()
+        self.wfile.write(result.encode())
+
+server = HTTPServer(("0.0.0.0", 8000), CloudService)
+print("Server running on port 8000...")
+server.serve_forever()
+
+
+# simple interest
+from http.server import HTTPServer, BaseHTTPRequestHandler
+from urllib.parse import urlparse, parse_qs
+
+class CloudService(BaseHTTPRequestHandler):
+
+    def do_GET(self):
+        parsed_url = urlparse(self.path)
+        params = parse_qs(parsed_url.query)
+
+        if parsed_url.path == "/":
+            self.show_form()
+
+        elif parsed_url.path == "/process":
+            self.process_request(params)
+
+    def show_form(self):
+        html = """
+        <html>
+        <body>
+            <h2>Simple Interest Calculator (Cloud Simulation)</h2>
+            <form action="/process" method="get">
+                Enter your name:
+                <input type="text" name="name"><br><br>
+
+                Principal:
+                <input type="number" name="p"><br><br>
+
+                Rate (%):
+                <input type="number" name="r"><br><br>
+
+                Time (years):
+                <input type="number" name="t"><br><br>
+
+                <input type="submit" value="Calculate">
+            </form>
+        </body>
+        </html>
+        """
+        self.send_response(200)
+        self.send_header("Content-type", "text/html")
+        self.end_headers()
+        self.wfile.write(html.encode())
+
+    def process_request(self, params):
+        name = params.get("name", ["Guest"])[0]
+        p = float(params.get("p", [0])[0])
+        r = float(params.get("r", [0])[0])
+        t = float(params.get("t", [0])[0])
+
+        # Simple Interest formula
+        si = (p * r * t) / 100
+
+        result = f"""
+        <html>
+        <body>
+            <h3>Hello {name}</h3>
+            <p>Principal: {p}</p>
+            <p>Rate: {r}%</p>
+            <p>Time: {t} years</p>
+            <p>Simple Interest: <b>{si}</b></p>
+        </body>
+        </html>
+        """
+
+        self.send_response(200)
+        self.send_header("Content-type", "text/html")
+        self.end_headers()
+        self.wfile.write(result.encode())
+
+server = HTTPServer(("0.0.0.0", 8000), CloudService)
+print("Server running on port 8000...")
+server.serve_forever()
+
+
+# compund interest
+from http.server import HTTPServer, BaseHTTPRequestHandler
+from urllib.parse import urlparse, parse_qs
+
+class CloudService(BaseHTTPRequestHandler):
+
+    def do_GET(self):
+        parsed_url = urlparse(self.path)
+        params = parse_qs(parsed_url.query)
+
+        if parsed_url.path == "/":
+            self.show_form()
+
+        elif parsed_url.path == "/process":
+            self.process_request(params)
+
+    def show_form(self):
+        html = """
+        <html>
+        <body>
+            <h2>Compound Interest Calculator (Cloud Simulation)</h2>
+            <form action="/process" method="get">
+                Enter your name:
+                <input type="text" name="name"><br><br>
+
+                Principal:
+                <input type="number" name="p"><br><br>
+
+                Rate (%):
+                <input type="number" name="r"><br><br>
+
+                Time (years):
+                <input type="number" name="t"><br><br>
+
+                <input type="submit" value="Calculate">
+            </form>
+        </body>
+        </html>
+        """
+        self.send_response(200)
+        self.send_header("Content-type", "text/html")
+        self.end_headers()
+        self.wfile.write(html.encode())
+
+    def process_request(self, params):
+        name = params.get("name", ["Guest"])[0]
+        p = float(params.get("p", [0])[0])
+        r = float(params.get("r", [0])[0])
+        t = float(params.get("t", [0])[0])
+
+        # Compound Interest formula
+        amount = p * (1 + r/100) ** t
+        ci = amount - p
+
+        result = f"""
+        <html>
+        <body>
+            <h3>Hello {name}</h3>
+            <p>Principal: {p}</p>
+            <p>Rate: {r}%</p>
+            <p>Time: {t} years</p>
+            <p>Compound Interest: <b>{ci}</b></p>
+            <p>Total Amount: <b>{amount}</b></p>
+        </body>
+        </html>
+        """
+
+        self.send_response(200)
+        self.send_header("Content-type", "text/html")
+        self.end_headers()
+        self.wfile.write(result.encode())
+
+server = HTTPServer(("0.0.0.0", 8000), CloudService)
+print("Server running on port 8000...")
+server.serve_forever()
