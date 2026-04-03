@@ -1,0 +1,58 @@
+IaaS
+Defn: IaaS is a cloud computing model that delivers on-demand servers, storage, and networking, 
+allowing businesses to rent resources, scale flexibly, and reduce hardware costs.
+
+How does it works: IaaS works by provides virtualized computing resources—such as servers, storage, and networking—online. 
+Cloud providers host and manage the underlying infrastructure in their data centers, while users access and configure these resources via a web interface or API.
+
+Businesses can scale resources up or down as needed, paying only for what they use. This eliminates the need for physical hardware management, 
+reduces costs, and makes it possible to rapidly deploy applications and services.
+
+Benefits of IaaS
+IaaS helps businesses cut costs, scale efficiently, enhance security, and speed up deployment.
+Increases deployment speed  , Enhances security ,Improves business continuity,Increases stability and reliability,Lowers expenses and optimizes costs
+
+Common IaaS business scenarios:
+Lift-and-shift migration
+Test and development
+Storage, backup, and recovery
+Web apps
+
+Ex: An example of an IaaS product is Microsoft Azure Virtual Machines, which provide scalable, on-demand cloud computing resources, 
+allowing businesses to run applications and workloads without maintaining physical servers.
+
+
+PaaS
+Defn:- Platform as a service (PaaS) is a cloud computing model that provides developers with a platform to build, deploy, and manage applications 
+without worrying about the underlying infrastructure. It allows developers to focus on writing code, while the cloud provider handles
+the infrastructure, maintenance, and scalability.
+
+PaaS includes everything needed for application development, including operating systems, runtime environments, databases, development tools, 
+middleware, and hosting and scaling capabilities.
+
+Advantages of PaaS:
+Reduced coding time
+Increased capabilities
+Support for multiple platforms
+Access to advanced tools
+Supports distributed teams
+Manages the full application lifecycle
+
+Ex:Google App Engine (GAE): Supports languages like Python, Java, and Node.js with built-in auto-scaling and security.
+
+
+SaaS:
+SaaS is a cloud-based software delivery model where individuals or organizations subscribe to applications rather than purchasing and installing them locally. 
+Customers access software over the internet, typically through a web browser, while the cloud service provider manages the underlying infrastructure, security, 
+maintenance, and updates.
+
+Advantages of SaaS:
+Access advanced applications
+Pay only for what you use
+No need for local installation
+Access app data from anywhere
+Support for a mobile workforce
+
+Ex: Azure AI services are an example of SaaS. These services help developers and organizations quickly build AI-powered applications without 
+requiring them to manage the underlying infrastructure. They include natural language processing, search, monitoring, 
+translation, speech, vision, and decision-making.
