@@ -1,0 +1,29 @@
+Cisco Cloud (Metacloud)
+SAN JOSE, Calif – September 17, 2014 – Cisco announced its intent to acquire privately held Metacloud. Based in Pasadena, Calif, 
+Metacloud deploys & operates private clouds for global organizations with a unique OpenStack-as-a-Service model that delivers & 
+remotely operates production-ready private clouds in customers’ data centers.
+Metacloud’s OpenStack-based cloud platform will accelerate Cisco’s strategy to build the world’s largest global Intercloud, 
+a network of clouds, together with key partners to address customer requirements for a globally distributed, highly secure cloud 
+platform capable of meeting the vast demands of Internet of Everything. Since announcing its intercloud strategy in March, Cisco 
+has made rapid progress, enlisting key technology partners, service & cloud providers, as well as customers, to standardize upon 
+the Cisco cloud services architecture, which is based on OpenStack open source software for building private & public clouds.
+With OpenStack gaining global acceptance through its ability to handle any workload on any hypervisor on any public or private cloud,
+the ability to manage OpenStack environments at scale is a critical component of Cisco’s Intercloud strategy. Cisco’s acquisition of 
+Metacloud’s remote managed OpenStack private cloud-as-a-service operations benefits of public cloud with the security & control provided by\
+private cloud deployments with remotely managed OpenStack private clouds & to deliver unique intercloud offerings to their customers.
+
+
+
+FOSS Cloud
+Free and open source software (FOSS) cloud computing represents the convergence of open-source development models with distributed, networked computing resources. While FOSS has roots in 1980s, its application to cloud accelerated in late 2000s, providing alternatives to proprietary solutions from vendors like Amazon, Microsoft & Google.
+History & Evolution
+1960s–1970s – The roots of shared computing
+1980s – The free software movement
+1990s – Linux & open source
+2000s–Present – Rise of open cloud
+
+Background & Purpose
+Philosophy – FOSS encourages transparency, security through community audit, & freedom from vendor lock-in.
+Economic Drivers – FOSS reduces high licensing costs associated with proprietary enterprise software.
+Corporate Adoption – Large companies (Red Hat, IBM, Google) heavily invest in & contribute to FOSS, making it a dominant force in cloud infrastructure.
+Security – The availability of source code allows for faster, proactive vulnerability discovery & fixing.
