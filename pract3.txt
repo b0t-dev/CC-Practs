@@ -15,7 +15,9 @@ private cloud deployments with remotely managed OpenStack private clouds & to de
 
 
 FOSS Cloud
-Free and open source software (FOSS) cloud computing represents the convergence of open-source development models with distributed, networked computing resources. While FOSS has roots in 1980s, its application to cloud accelerated in late 2000s, providing alternatives to proprietary solutions from vendors like Amazon, Microsoft & Google.
+Free and open source software (FOSS) cloud computing represents the convergence of open-source development models with distributed, networked computing resources.
+While FOSS has roots in 1980s, its application to cloud accelerated in late 2000s, providing alternatives to proprietary solutions from vendors like Amazon, 
+Microsoft & Google.
 History & Evolution
 1960s–1970s – The roots of shared computing
 1980s – The free software movement
